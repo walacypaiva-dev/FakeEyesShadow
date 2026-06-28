@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-primaria: #9c27b0;
+    --cor-secundaria: #ffc107;
+    --cor-fundo: #1a1a1a;
+    --cor-texto: #ffffff;
+    --cor-card: #2a2a2a;
+    --cor-border: #404040;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+    background-color: var(--cor-primaria);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s;
+}
+
+.nav a:hover {
+    opacity: 0.8;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, #6a0dad 100%);
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* BOTÕES */
+.btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--cor-secundaria);
+    color: #000;
+}
+
+.btn-primary:hover {
+    background-color: #ffb300;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-secondary {
+    background-color: #25d366;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #1fae52;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* INFO SECTION */
+.info {
+    background-color: var(--cor-card);
+    padding: 60px 20px;
+    border-top: 3px solid var(--cor-primaria);
+}
+
+.info .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background-color: var(--cor-fundo);
+    padding: 2rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--cor-primaria);
+    text-align: center;
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--cor-secundaria);
+}
+
+.info-card p {
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+.info-card small {
+    display: block;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 0.5rem;
+}
+
+/* PRODUTOS */
+.produtos {
+    padding: 80px 20px;
+    background-color: var(--cor-fundo);
+}
+
+.produtos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--cor-primaria);
+}
+
+.categoria {
+    margin-bottom: 4rem;
+}
+
+.categoria h3 {
+    font-size: 1.8rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--cor-primaria);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.produto-card {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid var(--cor-border);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-primaria);
+    box-shadow: 0 10px 30px rgba(156, 39, 176, 0.2);
+}
+
+.produto-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--cor-secundaria);
+}
+
+.produto-card p {
+    color: #ddd;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.detalhe {
+    color: #888;
+    font-size: 0.85rem !important;
+    font-style: italic;
+}
+
+/* ENTREGA */
+.entrega {
+    background: linear-gradient(135deg, var(--cor-primaria) 0%, #6a0dad 100%);
+    padding: 60px 20px;
+}
+
+.entrega h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.entrega-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.entrega-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.entrega-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.entrega-card p {
+    font-size: 1rem;
+}
+
+.entrega-card strong {
+    color: var(--cor-secundaria);
+    font-size: 1.2rem;
+}
+
+/* REDES SOCIAIS */
+.redes {
+    background-color: var(--cor-card);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.redes h2 {
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    margin-bottom: 2rem;
+}
+
+.redes-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.rede-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--cor-primaria);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    font-weight: bold;
+    min-width: 250px;
+}
+
+.rede-link:hover {
+    background-color: var(--cor-secundaria);
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+.footer {
+    background-color: #000;
+    padding: 2rem;
+    text-align: center;
+    border-top: 3px solid var(--cor-primaria);
+}
+
+.footer p {
+    color: #999;
+    margin: 0.5rem 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav ul {
+        gap: 1rem;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .info .container {
+        grid-template-columns: 1fr;
+    }
+
+    .rede-link {
+        width: 100%;
+    }
+}
